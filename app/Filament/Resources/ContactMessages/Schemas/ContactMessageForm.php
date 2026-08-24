@@ -13,9 +13,10 @@ class ContactMessageForm
         return $schema
             ->components([
                 Textarea::make('name')
-                    ->searchable(),
+                    ->required(),
                 Textarea::make('email')
-                    ->searchable(),
+              
+                    ->required(),
                 Textarea::make('subject')
                     ->nullable(),
                 Textarea::make('message')

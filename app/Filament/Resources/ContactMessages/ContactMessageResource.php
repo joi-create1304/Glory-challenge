@@ -50,9 +50,9 @@ class ContactMessageResource extends Resource
     {
         return [
             'index' => ListContactMessages::route('/'),
-            'create' => CreateContactMessage::route('/create'),
+            //'create' => CreateContactMessage::route('/create'),
             'view' => ViewContactMessage::route('/{record}'),
-            'edit' => EditContactMessage::route('/{record}/edit'),
+             // edit' => EditContactMessage::route('/{record}/edit'),
         ];
     }
 }

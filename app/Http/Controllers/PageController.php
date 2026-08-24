@@ -48,7 +48,7 @@ class PageController extends Controller
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
-
+            ContactMessage::create($request->only('name', 'email', 'subject', 'message'));
 
         return back()->with('success', true);
     }
