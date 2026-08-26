@@ -36,7 +36,8 @@
             </a>
         </nav>
 
-        <a href="{{ route('contact') }}" class="hidden md:inline-flex bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded-md hover:bg-gold/90 transition">
+        <a href="{{ route('contact') }}"
+            class="hidden md:inline-flex bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded-md hover:bg-gold/90 transition">
             Nous contacter
         </a>
 
