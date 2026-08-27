@@ -33,7 +33,9 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-6 border-t border-white/10">
 
                 <div>
-                    <div class="text-gold text-xl">🗂️</div>
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
+                        🗂️
+                    </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Gestion de projets
                     </div>
@@ -43,7 +45,9 @@
                 </div>
 
                 <div>
-                    <div class="text-gold text-xl">📊</div>
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
+                        📊
+                    </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Planification stratégique
                     </div>
@@ -53,7 +57,9 @@
                 </div>
 
                 <div>
-                    <div class="text-gold text-xl">🤝</div>
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
+                        🤝
+                    </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Conseil et accompagnement
                     </div>
@@ -63,7 +69,9 @@
                 </div>
 
                 <div>
-                    <div class="text-gold text-xl">🎓</div>
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
+                        🎓
+                    </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Formation professionnelle
                     </div>
@@ -75,6 +83,7 @@
             </div>
         </div>
     </section>
+
     <section class="max-w-7xl mx-auto px-6 -mt-4 relative z-10">
 
 
@@ -92,7 +101,7 @@
             @endforeach
         </div>
     </section>
-    <section class="max-w-7xl mx-auto px-6 py-16">
+    <section class="max-w-7xl mx-auto px-6 py-10">
         <div class="text-center mb-10">
             <h2 class="text-2xl font-medium">Nos domaines <span class="text-gold">d'intervention</span></h2>
             <p class="text-gray-500 mt-2">Des solutions complètes pour tous vos défis.</p>

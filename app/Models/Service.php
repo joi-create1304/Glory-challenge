@@ -13,5 +13,10 @@ class Service extends Model
     'description',
     'content',
     'order',
+    'points',
 ];
+
+    protected $casts = [
+        'points' => 'array',
+    ];
 }

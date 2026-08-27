@@ -6,11 +6,11 @@
     <title>{{ $title ?? 'Glory Challenge' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body class="font-sans text-gray-800 antialiased min-h-screen flex flex-col">
 
     @include('partials.navbar')
 
-    <div class="flex">
+    <div class="flex flex-1">
         <main class="flex-1">
             {{ $slot }}
         </main>
