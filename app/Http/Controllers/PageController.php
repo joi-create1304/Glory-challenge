@@ -47,8 +47,9 @@ class PageController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string',
+            'request_type' => 'nullable|string|in:Suivie de projet,Audit,Gestion de projet,Autre'
         ]);
-            ContactMessage::create($request->only('name', 'email', 'subject', 'message'));
+            ContactMessage::create($request->only('name', 'email', 'subject', 'request_type', 'message'));
 
         return back()->with('success', true);
     }

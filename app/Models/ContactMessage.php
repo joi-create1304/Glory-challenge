@@ -12,5 +12,6 @@ class ContactMessage extends Model
         'subject',
         'message',
         'is_read',
+        'request_type',
     ];
 }

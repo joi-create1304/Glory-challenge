@@ -5,6 +5,16 @@
                 <p class="section-label">Contactez-nous</p>
                 <h1 class="text-3xl font-medium mt-2">Parlons de votre prochain projet</h1>
                 <p class="text-gray-500 mt-4">Notre équipe est à l'écoute et vous propose les meilleures solutions.</p>
+                <div class="flex gap-3 mt-6">
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition">f</a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition">in</a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition">X</a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition">▶</a>
+                </div>
             </div>
 
             <div class="card">
@@ -17,17 +27,11 @@
                 @endif
 
                 <form method="POST" action="{{ route('contact.send') }}" class="space-y-4">
-                    {{-- @csrf est OBLIGATOIRE sur tout formulaire Laravel qui fait un POST.
-                         Ça génère un jeton de sécurité invisible qui prouve que le formulaire
-                         vient bien de ton site, et pas d'un site pirate qui l'imiterait. --}}
                     @csrf
 
                     <div>
                         <input type="text" name="name" placeholder="Nom complet" value="{{ old('name') }}"
                             class="border border-gray-300 rounded-md px-3 py-2 text-sm w-full">
-                        {{-- old('name') redonne à l'utilisateur ce qu'il avait tapé,
-                             s'il y a eu une erreur de validation ailleurs dans le formulaire.
-                             Sans ça, il devrait tout retaper depuis zéro à chaque erreur. --}}
 
                         @error('name')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -42,6 +46,21 @@
                         @enderror
                     </div>
 
+
+                    <div>
+                        <label class="text-sm text-gray-600 mb-1 block">Type de demande</label>
+                        <select name="request_type" class="border border-gray-300 rounded-md px-3 py-2 text-sm w-full">
+                            <option value="">Type de demande</option>
+                            <option value="Suivie de projet">Suivie de projet</option>
+                            <option value="Audit">Audit</option>
+                            <option value="Gestion de projet">Gestion de projet</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        @error('request_type')
+                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
                     <div>
                         <textarea name="message" rows="5" placeholder="Votre message"
                             class="border border-gray-300 rounded-md px-3 py-2 text-sm w-full">{{ old('message') }}</textarea>
@@ -50,11 +69,13 @@
                         @enderror
                     </div>
 
+
                     <button type="submit" class="btn-primary w-full justify-center">
                         Envoyer le message
                     </button>
                 </form>
             </div>
         </div>
+
     </div>
 </x-layout>

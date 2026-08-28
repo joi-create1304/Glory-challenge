@@ -8,20 +8,25 @@
                 :class="activeFilter === 'Tous' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
                 x-on:click="activeFilter = 'Tous'">Tous</button>
             <button class="filter-button"
-                :class="activeFilter === 'Bâtiment' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
-                x-on:click="activeFilter = 'Bâtiment'">Bâtiment</button>
+                :class="activeFilter === 'Gestion de projet' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
+                x-on:click="activeFilter = 'Gestion de projet'">Gestion de projet</button>
             <button class="filter-button"
-                :class="activeFilter === 'Énergie' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
-                x-on:click="activeFilter = 'Énergie'">Énergie</button>
+                :class="activeFilter === 'Planification' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
+                x-on:click="activeFilter = 'Planification'">Planification</button>
             <button class="filter-button"
-                :class="activeFilter === 'IT & digital' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
-                x-on:click="activeFilter = 'IT & digital'">IT & digital</button>
+                :class="activeFilter === 'Conseil ' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
+                x-on:click="activeFilter = 'Conseil '">Conseil</button>
+            <button class="filter-button"
+                :class="activeFilter === 'Formation' ? 'bg-gold text-white' : 'bg-gray-200 text-gray-700'"
+                x-on:click="activeFilter = 'Formation'">Formation</button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             @foreach ($projects as $project)
                 <div class="card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     x-show="activeFilter === 'Tous' || activeFilter === '{{ $project->category }}'">
+                    <img src="{{ $project->cover_image }}" alt="{{ $project->title }}" class="w-full h-48 object-cover">
+                
                     <div class="flex items-center justify-between mb-3">
                         <span
                             class="text-xs px-2 py-1 rounded-full {{ $project->status === 'Terminé' ? 'bg-green-100 text-green-700' : 'bg-gold-light text-gold' }}">
