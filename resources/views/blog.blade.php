@@ -5,10 +5,15 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             @foreach ($articles as $article)
-                <div class="card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                    <span class="text-xs text-gold font-medium">{{ $article->date }}</span>
-                    <h2 class="font-medium text-lg mt-2">{{ $article->title }}</h2>
-                </div>
+                <a href="{{ route('blog.show', $article) }}"
+                    class="card p-0 overflow-hidden block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <img src="{{ $article->cover_image }}" alt="{{ $article->title }}" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs text-gold font-medium">{{ $article->published_at->format('d M') }}</span>
+                        <h2 class="font-medium text-lg mt-2">{{ $article->title }}</h2>
+                        <p class="text-sm text-gray-400 mt-2">{{ $article->excerpt }}</p>
+                    </div>
+                </a>
             @endforeach
         </div>
     </div>

@@ -53,4 +53,7 @@ class PageController extends Controller
 
         return back()->with('success', true);
     }
+    public function blogShow(Article $article){
+        return view('blogshow', compact('article'));
+    }
 }

@@ -14,6 +14,9 @@ class Article extends Model
         'cover_image',
         'published_at',
     ];
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];  
 }
-    
+
 
