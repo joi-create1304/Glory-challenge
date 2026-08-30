@@ -109,14 +109,15 @@
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             @foreach ([['Gestion de projets', 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=80&w=800&auto=format&fit=crop'], ['Planification stratégique', 'https://images.unsplash.com/photo-1758873269035-aae0e1fd3422?fm=jpg&q=80&w=800&auto=format&fit=crop'], ['Conseil & accompagnement', 'https://images.unsplash.com/photo-1638262052640-82e94d64664a?fm=jpg&q=80&w=800&auto=format&fit=crop'], ['Formation professionnelle', 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?fm=jpg&q=80&w=800&auto=format&fit=crop']] as [$domain, $image])
-                <div class="relative rounded-xl overflow-hidden h-48 group cursor-pointer">
+                <a href="{{ route('services') }}"
+                    class="relative rounded-xl overflow-hidden h-48 group cursor-pointer block">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
                         style="background-image: url('{{ $image }}')"></div>
                     <div class="absolute inset-0 bg-navy/60"></div>
                     <div class="absolute inset-0 flex items-end p-4">
                         <span class="text-white font-medium text-sm">{{ $domain }}</span>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
     </section>
