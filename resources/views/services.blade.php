@@ -6,7 +6,7 @@
         <div class="grid md:grid-cols-2 gap-5 mt-10">
             @foreach ($services as $service)
                 <div class="card p-6">
-                    <div class="text-2xl">{{ $service->icon }}</div>
+                    <div class="text-2xl text-gold"><i class="bi bi-{{ $service->icon }}"></i></div>
                     <h2 class="text-xl font-medium mt-2">{{ $service->title }}</h2>
                     <p class="text-gray-400 mt-3">{{ $service->description }}</p>
                     <ul class="text-sm text-gray-500 mt-3 space-y-1">

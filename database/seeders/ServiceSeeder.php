@@ -16,7 +16,7 @@ class ServiceSeeder extends Seeder
         Service::create([
             'title' => 'Gestion de projets',
             'slug' => 'gestion-de-projets',
-            'icon' => '🗂️',
+            'icon' => 'folder2-open',
             'description' => 'Nous pilotons vos projets avec rigueur, de la planification à la livraison.',
             'points' => ['Planification', 'Coordination', 'Suivi & contrôle'],
             'order' => 1,
@@ -25,7 +25,7 @@ class ServiceSeeder extends Seeder
         Service::create([
             'title' => 'Planification stratégique',
             'slug' => 'planification-strategique',
-            'icon' => '📊',
+            'icon' => 'graph-up',
             'description' => 'Des stratégies claires pour une croissance durable.',
             'points' => ['Analyse & diagnostic', 'Définition des objectifs', 'Feuille de route stratégique'],
             'order' => 2,
@@ -34,7 +34,7 @@ class ServiceSeeder extends Seeder
         Service::create([
             'title' => 'Conseil et accompagnement',
             'slug' => 'conseil-et-accompagnement',
-            'icon' => '🤝',
+            'icon' => 'people-fill',
             'description' => 'Un partenaire de confiance pour vos décisions clés.',
             'points' => ['Optimisation des processus', 'Résolution de problèmes', 'Accompagnement personnalisé'],
             'order' => 3,
@@ -43,7 +43,7 @@ class ServiceSeeder extends Seeder
         Service::create([
             'title' => 'Formation professionnelle',
             'slug' => 'formation-professionnelle',
-            'icon' => '🎓',
+            'icon' => 'mortarboard',
             'description' => 'Montez en compétences pour mieux performer.',
             'points' => ['Formations pratiques', 'Développement des talents', 'Certification interne'],
             'order' => 4,

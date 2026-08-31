@@ -26,7 +26,7 @@ class ProjectSeeder extends Seeder
         Project::create([
             'title' => 'Stratégie de croissance PME',
             'slug' => 'Strategie-croissance-PME',
-            'category' => 'Planification ',
+            'category' => 'Planification',
             'status' => 'En cours',
             'duration' => '06 mois',
             'description' => "Un projet de construction d'une centrale solaire de 10 MW, visant à produire de l'énergie renouvelable et réduire l'empreinte carbone.",

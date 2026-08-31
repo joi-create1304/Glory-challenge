@@ -33,8 +33,8 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-6 border-t border-white/10">
 
                 <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
-                        🗂️
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
+                        <i class="bi bi-folder"></i>
                     </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Gestion de projets
@@ -45,8 +45,8 @@
                 </div>
 
                 <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
-                        📊
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
+                        <i class="bi bi-graph-up"></i>
                     </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Planification stratégique
@@ -57,8 +57,8 @@
                 </div>
 
                 <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
-                        🤝
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
+                        <i class="bi bi-people"></i>
                     </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Conseil et accompagnement
@@ -69,8 +69,8 @@
                 </div>
 
                 <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-lg">
-                        🎓
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
+                        <i class="bi bi-mortarboard"></i>
                     </div>
                     <div class="text-white text-sm font-medium mt-1">
                         Formation professionnelle
