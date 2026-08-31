@@ -1,7 +1,5 @@
 <x-layout title="Glory Challenge - Accueil">
 
-    {{-- Hero --}}
-
     <section class="relative bg-navy bg-cover bg-center"
         style="background-image: url('https://images.unsplash.com/photo-1776914579657-3396d13eb13e?fm=jpg&q=80&w=1600&auto=format&fit=crop')">
 
