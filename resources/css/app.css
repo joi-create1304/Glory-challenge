@@ -12,7 +12,7 @@
     }
 
     .section-label {
-        @apply text-gold text-xs font-semibold tracking-widest uppercase;
+        @apply text-gold text-base font-semibold tracking-widest uppercase;
     }
 
     .card {

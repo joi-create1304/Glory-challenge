@@ -28,61 +28,11 @@
             </div>
 
             {{-- Badges du Hero --}}
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-6 border-t border-white/10">
 
-                <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
-                        <i class="bi bi-folder"></i>
-                    </div>
-                    <div class="text-white text-sm font-medium mt-1">
-                        Gestion de projets
-                    </div>
-                    <div class="text-gray-400 text-xs">
-                        Efficacité et performance
-                    </div>
-                </div>
-
-                <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
-                        <i class="bi bi-graph-up"></i>
-                    </div>
-                    <div class="text-white text-sm font-medium mt-1">
-                        Planification stratégique
-                    </div>
-                    <div class="text-gray-400 text-xs">
-                        Vision et résultats
-                    </div>
-                </div>
-
-                <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
-                        <i class="bi bi-people"></i>
-                    </div>
-                    <div class="text-white text-sm font-medium mt-1">
-                        Conseil et accompagnement
-                    </div>
-                    <div class="text-gray-400 text-xs">
-                        Expertise à votre service
-                    </div>
-                </div>
-
-                <div>
-                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold text-lg">
-                        <i class="bi bi-mortarboard"></i>
-                    </div>
-                    <div class="text-white text-sm font-medium mt-1">
-                        Formation professionnelle
-                    </div>
-                    <div class="text-gray-400 text-xs">
-                        Montée en compétences
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 -mt-4 relative z-10">
+    <section class="max-w-7xl mx-auto px-6 mt-10 relative z-10">
 
 
         <div class="text-center mb-10">
@@ -91,8 +41,9 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            @foreach ([['Objectifs clairs', 'Des stratégies alignées sur vos ambitions.'], ['Méthodes éprouvées', 'Des processus performants et fiables.'], ['Équipe expérimentée', 'Des experts passionnés à votre service.'], ['Résultats mesurables', 'Une croissance durable et une meilleure productivité.']] as [$title, $description])
+            @foreach ([['Objectifs clairs', 'Des stratégies alignées sur vos ambitions.', 'bullseye'], ['Méthodes éprouvées', 'Des processus performants et fiables.', 'gear'], ['Équipe expérimentée', 'Des experts passionnés à votre service.', 'people'], ['Résultats mesurables', 'Une croissance durable et une meilleure productivité.', 'graph-up-arrow']] as [$title, $description, $icon])
                 <div class="card text-center">
+                    <div class="text-gold text-2xl mb-2"><i class="bi bi-{{ $icon }}"></i></div>
                     <div class="font-medium text-sm">{{ $title }}</div>
                     <div class="text-xs text-gray-500 mt-1">{{ $description }}</div>
                 </div>
@@ -120,7 +71,7 @@
         </div>
     </section>
     <section class="bg-navy">
-        <div class="border-t border-white/10 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+        <div class="grid grid-cols-2 md:grid-cols-4">
             @foreach ([['50+', 'Projets réalisés'], ['98%', 'Taux de satisfaction'], ['15+', "Secteurs d'activité"], ['100%', 'Engagement qualité']] as [$number, $label])
                 <div class="text-center py-6">
                     <div class="text-gold text-2xl font-medium">{{ $number }}</div>
@@ -130,3 +81,7 @@
         </div>
     </section>
 </x-layout>
+
+
+
+
