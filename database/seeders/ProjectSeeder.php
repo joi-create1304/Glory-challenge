@@ -36,7 +36,7 @@ class ProjectSeeder extends Seeder
         Project::create([
             'title' => 'Optimisation des processus',
             'slug' => 'Optimisation-processus',
-            'category' => 'Conseil ',
+            'category' =>'Conseil',
             'status' => 'Terminé',
             'duration' => '08 mois',
             'description' => "Un projet de modernisation numérique de l'infrastructure informatique, visant à améliorer l'efficacité et la sécurité des systèmes d'information.",

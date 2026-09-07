@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Articles\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
@@ -15,18 +16,23 @@ class ArticlesTable
         return $table
             ->columns([
                 TextColumn::make('title')
+                    ->label('Titre')
                     ->searchable(),
                 TextColumn::make('excerpt')
+                    ->label('Extrait')
                     ->limit(50),
                 TextColumn::make('published_at')
+                    ->label('Publié le')
                     ->dateTime()
                     ->sortable(),
             ])
+
             ->filters([
                 //
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactConfirmation;
 use App\Models\Article;
 use App\Models\ContactMessage;
 use App\Models\Project;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -42,17 +44,20 @@ class PageController extends Controller
         return view('blog', compact('articles'));
     }
     public function sendContact(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email',
-            'message' => 'required|string',
-            'request_type' => 'nullable|string|in:Suivie de projet,Audit,Gestion de projet,Autre'
-        ]);
-            ContactMessage::create($request->only('name', 'email', 'subject', 'request_type', 'message'));
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email',
+        'message' => 'required|string',
+        'request_type' => 'required|string|in:Suivie de projet,Audit,Gestion de projet,Autre'
+    ]);
 
-        return back()->with('success', true);
-    }
+    $contactMessage = ContactMessage::create($request->only('name', 'email', 'subject', 'request_type', 'message'));
+
+    Mail::to($contactMessage->email)->send(new ContactConfirmation($contactMessage));
+
+    return back()->with('success', true);
+}
     public function blogShow(Article $article){
         return view('blogshow', compact('article'));
     }

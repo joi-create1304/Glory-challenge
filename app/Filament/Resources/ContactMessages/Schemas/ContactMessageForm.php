@@ -13,15 +13,19 @@ class ContactMessageForm
         return $schema
             ->components([
                 Textarea::make('name')
+                    ->label('Nom')
                     ->required(),
                 Textarea::make('email')
-              
+                    ->label('Email')
                     ->required(),
                 Textarea::make('subject')
+                    ->label('Sujet')
                     ->nullable(),
                 Textarea::make('message')
+                    ->label('Message')
                     ->nullable(),
                 Toggle::make('is_read')
+                    ->label('Lu')
                     ->default(false),
             ]);
     }

@@ -11,32 +11,39 @@
 
         <nav class="hidden md:flex items-center gap-7 text-sm text-gray-200">
             <a href="{{ route('home') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('home') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 Accueil
             </a>
             <a href="{{ route('about') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('about') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 À propos
             </a>
             <a href="{{ route('services') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('services') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 Services
             </a>
             <a href="{{ route('projects') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('projects') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 Projets
             </a>
             <a href="{{ route('blog') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('blog') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 Blog
             </a>
             <a href="{{ route('contact') }}"
-                class="relative text-gray-200 hover:text-gold transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full">
+                class="relative transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-gold after:transition-all after:duration-300 hover:text-gold hover:after:w-full
+        {{ request()->routeIs('contact') ? 'text-gold after:w-full' : 'text-gray-200 after:w-0' }}">
                 Contact
             </a>
         </nav>
 
-        <a href="{{ route('contact') }}" class="hidden md:inline-flex bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded-md hover:bg-gold/90 transition">
+        <a href="{{ route('contact') }}"
+            class="hidden md:inline-flex bg-gold text-navy text-sm font-medium px-5 py-2.5 rounded-md hover:bg-gold/90 transition">
             Nous contacter
         </a>
 

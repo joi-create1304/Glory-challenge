@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Services\Tables;
 
 use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
@@ -14,10 +15,13 @@ class ServicesTable
     {
         return $table
             ->columns([
-                TextColumn::make('icon'),
+                TextColumn::make('icon')
+                    ->label('Icône'),
                 TextColumn::make('title')
+                    ->label('Titre')
                     ->searchable(),
                 TextColumn::make('order')
+                    ->label('Ordre')
                     ->sortable(),
 
             ])
@@ -26,6 +30,7 @@ class ServicesTable
             ])
             ->recordActions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

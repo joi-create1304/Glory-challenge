@@ -50,6 +50,16 @@
             @endforeach
         </div>
     </section>
+    <section class=" bg-navy" >
+        <div class="grid grid-cols-2 md:grid-cols-4">
+            @foreach ([['50+', 'Projets réalisés'], ['98%', 'Taux de satisfaction'], ['15+', "Secteurs d'activité"], ['100%', 'Engagement qualité']] as [$number, $label])
+                <div class="text-center py-6">
+                    <div class="text-gold text-2xl font-medium">{{ $number }}</div>
+                    <div class="text-gray-400 text-xs mt-1">{{ $label }}</div>
+                </div>
+            @endforeach
+        </div>
+    </section>
     <section class="max-w-7xl mx-auto px-6 py-10">
         <div class="text-center mb-10">
             <h2 class="text-2xl font-medium">Nos domaines <span class="text-gold">d'intervention</span></h2>
@@ -67,16 +77,6 @@
                         <span class="text-white font-medium text-sm">{{ $domain }}</span>
                     </div>
                 </a>
-            @endforeach
-        </div>
-    </section>
-    <section class="bg-navy">
-        <div class="grid grid-cols-2 md:grid-cols-4">
-            @foreach ([['50+', 'Projets réalisés'], ['98%', 'Taux de satisfaction'], ['15+', "Secteurs d'activité"], ['100%', 'Engagement qualité']] as [$number, $label])
-                <div class="text-center py-6">
-                    <div class="text-gold text-2xl font-medium">{{ $number }}</div>
-                    <div class="text-gray-400 text-xs mt-1">{{ $label }}</div>
-                </div>
             @endforeach
         </div>
     </section>

@@ -13,26 +13,26 @@ class ProjectForm
     {
         return $schema
             ->components([
-                    TextInput::make('title')
-                        ->required()
-                        ->maxLength(255),
-                    TextInput::make('slug')
-                        ->required()
-                        ->maxLength(255),
-                    TextInput::make('category')
-                        ->required()
-                        ->maxLength(255),
-                    TextInput::make('status')
-                        ->required()
-                        ->maxLength(255),
-                    TextInput::make('duration')
-                        ->nullable(),
-                    Textarea::make('description')
-                        ->nullable(),
+                TextInput::make('title')
+                    ->label('Titre')
+                    ->required()
+                    ->maxLength(255),
+                TextInput::make('category')
+                    ->label('Catégorie')
+                    ->required()
+                    ->maxLength(255),
+                TextInput::make('status')
+                    ->label('Statut')
+                    ->required()
+                    ->maxLength(255),
+                TextInput::make('duration')
+                    ->label('Durée')
+                    ->nullable(),
+                Textarea::make('description')
+                    ->label('Description')
+                    ->nullable(),
 
 
             ]);
     }
 }
-
-

@@ -1,9 +1,17 @@
 <x-layout title="Glory Challenge - Blog">
-    <div class="max-w-7xl mx-auto px-6 py-16">
-        <p class="section-label">Blog / Actualités</p>
-        <h1 class="text-3xl font-medium mt-2">Conseils, tendances et bonnes pratiques</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+    {{-- Bandeau avec image fixe --}}
+    <section class="relative bg-navy bg-fixed bg-cover bg-center py-20"
+        style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?fm=jpg&q=60&w=1600&auto=format&fit=crop')">
+        <div class="absolute inset-0 bg-navy/70"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <p class="section-label">Blog / Actualités</p>
+            <h1 class="text-3xl font-medium mt-2 text-white">Conseils, tendances et bonnes pratiques</h1>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @foreach ($articles as $article)
                 <a href="{{ route('blog.show', $article) }}"
                     class="card p-0 overflow-hidden block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -17,4 +25,5 @@
             @endforeach
         </div>
     </div>
+
 </x-layout>

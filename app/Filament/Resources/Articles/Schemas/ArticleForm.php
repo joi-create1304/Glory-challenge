@@ -15,20 +15,21 @@ class ArticleForm
         return $schema
             ->components([
                 Textarea::make('title')
-                    ->searchable(),
-                Textarea::make('slug')
-                    ->unique()
-                    ->searchable(),
+                ->label('Titre')
+                    ->required(),
                 Textarea::make('excerpt')
+                    ->label('Extrait')
                     ->nullable(),
-                RichEditor::make('content'),
+                RichEditor::make('content')
+                    ->label('Contenu')
+                    ->nullable(),
                 FileUpload::make('cover_image')
+                    ->label('Image de Couverture')
                     ->nullable(),
                 DateTimePicker::make('published_at')
+                    ->label('Publié le')
                     ->nullable(),
 
             ]);
     }
 }
-
-

@@ -16,11 +16,15 @@ class ContactMessagesTable
         return $table
             ->columns([
                 TextColumn::make('name')
+                    ->label('Nom')
                     ->searchable(),
                 TextColumn::make('email')
+                    ->label('Email')
                     ->searchable(),
-                TextColumn::make('subject'),
-                TextColumn::make('message'),
+                TextColumn::make('subject')
+                    ->label('Sujet'),
+                TextColumn::make('message')
+                    ->label('Message'),
 
             ])
             ->filters([

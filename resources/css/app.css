@@ -31,3 +31,7 @@ body {
     overscroll-behavior-y: none;
     scroll-behavior: smooth;
 }
+
+[x-cloak] {
+    display: none !important;
+}
